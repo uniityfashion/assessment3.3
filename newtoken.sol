@@ -7,8 +7,8 @@ contract MyToken is ERC20 {
     address public owner;
 
     constructor(string memory name, string memory symbol) ERC20(name, symbol) {
-        owner = msg.sender; // Contract deployer is set as the owner
-        _mint(msg.sender, 10000 * 10 ** decimals()); // Mint initial supply to the owner
+        owner = msg.sender;
+        _mint(msg.sender, 10000 * 10 ** decimals());
     }
 
     function mint(address account, uint256 amount) public {
